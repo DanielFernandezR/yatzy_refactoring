@@ -56,10 +56,10 @@ def test_sum_of_bigger_pair():
     assert Yatzy.sum_bigger_pair(5, 3, 6, 6, 5) == 12
 
 
-def test_two_Pair():
-    assert 16 == Yatzy.two_pair(3, 3, 5, 4, 5)
-    assert 18 == Yatzy.two_pair(3, 3, 6, 6, 6)
-    assert 0 == Yatzy.two_pair(3, 3, 6, 5, 4)
+def test_sum_of_two_pairs():
+    assert Yatzy.sum_two_pairs(3, 3, 5, 4, 5) == 16
+    assert Yatzy.sum_two_pairs(3, 3, 6, 6, 6) == 18
+    assert Yatzy.sum_two_pairs(3, 3, 6, 5, 4) == 0
 
 
 def test_three_of_a_kind():
