@@ -50,10 +50,10 @@ def test_sum_of_sixes():
     assert Yatzy.sum_of_sixes(6, 5, 6, 6, 5) == 18
 
 
-def test_one_pair():
-    assert 6 == Yatzy.score_pair(3, 4, 3, 5, 6)
-    assert 10 == Yatzy.score_pair(5, 3, 3, 3, 5)
-    assert 12 == Yatzy.score_pair(5, 3, 6, 6, 5)
+def test_sum_of_bigger_pair():
+    assert Yatzy.sum_bigger_pair(3, 4, 3, 5, 6) == 6
+    assert Yatzy.sum_bigger_pair(5, 3, 3, 3, 5) == 10
+    assert Yatzy.sum_bigger_pair(5, 3, 6, 6, 5) == 12
 
 
 def test_two_Pair():
