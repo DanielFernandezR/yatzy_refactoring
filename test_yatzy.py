@@ -68,11 +68,11 @@ def test_sum_of_three_same_num():
     assert Yatzy.sum_three_same_num(3, 3, 3, 3, 5) == 9
 
 
-def test_four_of_a_knd():
-    assert 12 == Yatzy.four_of_a_kind(3, 3, 3, 3, 5)
-    assert 20 == Yatzy.four_of_a_kind(5, 5, 5, 4, 5)
-    assert 12 == Yatzy.four_of_a_kind(3, 3, 3, 3, 3)
-    assert 0 == Yatzy.four_of_a_kind(3, 3, 3, 2, 1)
+def test_sum_of_four_same_num():
+    assert Yatzy.sum_four_same_num(3, 3, 3, 3, 5) == 12
+    assert Yatzy.sum_four_same_num(5, 5, 5, 4, 5) == 20
+    assert Yatzy.sum_four_same_num(3, 3, 3, 3, 3) == 12
+    assert Yatzy.sum_four_same_num(3, 3, 3, 2, 1) == 0
 
 
 def test_smallStraight():
