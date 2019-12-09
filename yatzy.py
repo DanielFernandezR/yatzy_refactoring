@@ -136,37 +136,29 @@ class Yatzy:
 
     @staticmethod
     def sum_small_straight(*dice):
-        small_number = 1
         list_numbers = []
         for die in dice:
-            if dice.count(die) == small_number:
-                if list_numbers.count(die) == 0:
-                    list_numbers.append(die)
-                else:
-                    continue
-            else:
+            if dice.count(die) != 1:
                 return 0
-        if list_numbers == []:
+            else:
+                list_numbers.append(die)
+        if 6 in list_numbers:
             return 0
         else:
             return 15
 
     @staticmethod
-    def largeStraight( d1,  d2,  d3,  d4,  d5):
-        tallies = [0]*6
-        tallies[d1-1] += 1
-        tallies[d2-1] += 1
-        tallies[d3-1] += 1
-        tallies[d4-1] += 1
-        tallies[d5-1] += 1
-        if (tallies[1] == 1 and
-            tallies[2] == 1 and
-            tallies[3] == 1 and
-            tallies[4] == 1
-            and tallies[5] == 1):
+    def sum_large_straight(*dice):
+        list_numbers = []
+        for die in dice:
+            if dice.count(die) != 1:
+                return 0
+            else:
+                list_numbers.append(die)
+        if 1 in list_numbers:
+            return 0
+        else:
             return 20
-        return 0
-    
 
     @staticmethod
     def fullHouse( d1,  d2,  d3,  d4,  d5):
