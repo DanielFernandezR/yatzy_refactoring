@@ -16,5 +16,6 @@
   "test_yatzy.py::test_fullHouse",
   "test_yatzy.py::test_sum_of_bigger_pair",
   "test_yatzy.py::test_sum_of_two_pairs",
-  "test_yatzy.py::test_sum_of_three_same_num"
+  "test_yatzy.py::test_sum_of_three_same_num",
+  "test_yatzy.py::test_sum_of_four_same_num"
 ]

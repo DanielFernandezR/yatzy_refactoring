@@ -120,21 +120,19 @@ class Yatzy:
             return list_numbers[0] * three_kind
 
     @staticmethod
-    def four_of_a_kind( _1,  _2,  d3,  d4,  d5):
-        tallies = [0]*6
-        tallies[_1-1] += 1
-        tallies[_2-1] += 1
-        tallies[d3-1] += 1
-        tallies[d4-1] += 1
-        tallies[d5-1] += 1
-        for i in range(6):
-            if (tallies[i] >= 4):
-                return (i+1) * 4
-        return 0
-    
-
-
-    
+    def sum_four_same_num(*dice):
+        four_kind = 4
+        list_numbers = []
+        for die in dice:
+            if dice.count(die) >= four_kind:
+                if list_numbers.count(die) == 0:
+                    list_numbers.append(die)
+                else:
+                    continue
+        if list_numbers == []:
+            return 0
+        else:
+            return list_numbers[0] * four_kind
 
     @staticmethod
     def smallStraight( d1,  d2,  d3,  d4,  d5):
