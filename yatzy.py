@@ -105,6 +105,21 @@ class Yatzy:
             return (list_numbers[0] * pair) + (list_numbers[-1] * pair)
 
     @staticmethod
+    def sum_three_same_num(*dice):
+        three_kind = 3
+        list_numbers = []
+        for die in dice:
+            if dice.count(die) >= three_kind:
+                if list_numbers.count(die) == 0:
+                    list_numbers.append(die)
+                else:
+                    continue
+        if list_numbers == []:
+            return 0
+        else:
+            return list_numbers[0] * three_kind
+
+    @staticmethod
     def four_of_a_kind( _1,  _2,  d3,  d4,  d5):
         tallies = [0]*6
         tallies[_1-1] += 1
@@ -118,18 +133,7 @@ class Yatzy:
         return 0
     
 
-    @staticmethod
-    def three_of_a_kind( d1,  d2,  d3,  d4,  d5):
-        t = [0]*6
-        t[d1-1] += 1
-        t[d2-1] += 1
-        t[d3-1] += 1
-        t[d4-1] += 1
-        t[d5-1] += 1
-        for i in range(6):
-            if (t[i] >= 3):
-                return (i+1) * 3
-        return 0
+
     
 
     @staticmethod
