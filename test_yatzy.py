@@ -62,10 +62,10 @@ def test_sum_of_two_pairs():
     assert Yatzy.sum_two_pairs(3, 3, 6, 5, 4) == 0
 
 
-def test_three_of_a_kind():
-    assert 9 == Yatzy.three_of_a_kind(3, 3, 3, 4, 5)
-    assert 15 == Yatzy.three_of_a_kind(5, 3, 5, 4, 5)
-    assert 9 == Yatzy.three_of_a_kind(3, 3, 3, 3, 5)
+def test_sum_of_three_same_num():
+    assert Yatzy.sum_three_same_num(3, 3, 3, 4, 5) == 9
+    assert Yatzy.sum_three_same_num(5, 3, 5, 4, 5) == 15
+    assert Yatzy.sum_three_same_num(3, 3, 3, 3, 5) == 9
 
 
 def test_four_of_a_knd():
