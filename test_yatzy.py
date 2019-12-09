@@ -79,12 +79,16 @@ def test_small_straight():
     assert Yatzy.sum_small_straight(1, 2, 3, 4, 5) == 15
     assert Yatzy.sum_small_straight(2, 3, 4, 5, 1) == 15
     assert Yatzy.sum_small_straight(1, 2, 2, 4, 5) == 0
+    assert Yatzy.sum_small_straight(1, 2, 3, 4, 6) == 0
+    assert Yatzy.sum_small_straight(1, 6, 2, 3, 5) == 0
 
 
-def test_largeStraight():
-    assert 20 == Yatzy.largeStraight(6, 2, 3, 4, 5)
-    assert 20 == Yatzy.largeStraight(2, 3, 4, 5, 6)
-    assert 0 == Yatzy.largeStraight(1, 2, 2, 4, 5)
+def test_large_straight():
+    assert Yatzy.sum_large_straight(6, 2, 3, 4, 5) == 20
+    assert Yatzy.sum_large_straight(2, 3, 4, 5, 6) == 20
+    assert Yatzy.sum_large_straight(1, 2, 2, 4, 5) == 0
+    assert Yatzy.sum_large_straight(1, 2, 3, 4, 6) == 0
+    assert Yatzy.sum_large_straight(3, 2, 2, 4, 5) == 0
 
 
 def test_fullHouse():
