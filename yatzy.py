@@ -26,7 +26,6 @@ class Yatzy:
                 continue
         return total_of_ones
 
-
     @staticmethod
     def sum_of_twos(*dice):
         sum_twos = 0
@@ -57,7 +56,6 @@ class Yatzy:
                 continue
         return sum_fours
 
-
     def sum_of_fives(*dice):
         sum_fives = 0
         for die in dice:
@@ -66,7 +64,6 @@ class Yatzy:
             else:
                 continue
         return sum_fives
-    
 
     def sum_of_sixes(*dice):
         sum_sixes = 0
@@ -76,9 +73,9 @@ class Yatzy:
             else:
                 continue
         return sum_sixes
-    
+
     @staticmethod
-    def score_pair(*dice):
+    def sum_bigger_pair(*dice):
         pair = 2
         list_numbers = []
         for die in dice:
@@ -91,7 +88,7 @@ class Yatzy:
         else:
             list_numbers.sort()
             return list_numbers[-1] * pair
-    
+
     @staticmethod
     def two_pair( d1,  d2,  d3,  d4,  d5):
         counts = [0]*6
