@@ -19,5 +19,6 @@
   "test_yatzy.py::test_sum_of_three_same_num",
   "test_yatzy.py::test_sum_of_four_same_num",
   "test_yatzy.py::test_small_straight",
-  "test_yatzy.py::test_large_straight"
+  "test_yatzy.py::test_large_straight",
+  "test_yatzy.py::test_full_house"
 ]
